@@ -3,11 +3,15 @@ package com.db1Start;
 public class Main {
 
 	public static void main(String[] args) {
+
+		
 		Exercicio exercicio = new Exercicio();
 		
-		exercicio.Inteiro(10,7);
-		exercicio.Texto("Db1 StarT");
-		exercicio.Real(22.5, 10, 18.9);
+		
+		System.out.println(exercicio.quatroPrimeirasLetras("rafael rocha"));
+		System.out.println(exercicio.terceiraLetra("rafael rocha"));
+		System.out.println(exercicio.quatroUltimasLetras("rafael rocha"));
+		System.out.println(exercicio.inverteTexto("rafael rocha"));
 	}
 }
 
