@@ -137,7 +137,7 @@ public class Exercicio {
 
 	
 //exercicios Real	
-	//1 - Método que exiba qual é o menor valor entre dois doubles
+	//1 - Método que exiba qual é o menor valor entre dois doubles 
 	public double menorReal(double valor1, double valor2) {
 		if (valor1 < valor2)
 			return valor1;

@@ -7,7 +7,7 @@ public class Main {
 		Integer valor1 = 10, valor2 = 27;
 		double real1 = 10.3, real2 = 5.8, real3 = 20.5;
 		
-		Exercicio exercicio = new Exercicio();
+		Exercicio exercicio = new Exercicio(); 
 		
 		//exercicios Integer
 		System.out.println("-----Exercicios Integer");
