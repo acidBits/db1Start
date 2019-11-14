@@ -1,31 +1,14 @@
 /*
-Exercícios de Inteiro (Integer)
-
-
-
-
-
-
-
-
-Exercícios de Texto (String)
-
-
-
-
 5 - Método que retorne o item 4 com a mesma quantidade de letras do item 3.
-
-
-
 9 - Método que receba o seu nome completo e substitua o seu primeiro nome por ALUNO/ALUNA
-10 - Método que receba o seguinte texto "banana, maçã, melancia" e exiba o texto separadamente.
-11 - Método que receba um texto e exiba quantas vogais tem no texto
 
 */
 
-
-
 package com.db1Start;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class Exercicio {
 
@@ -67,15 +50,11 @@ public class Exercicio {
 	
 	//7 - Método que a partir de um valor inicial, mostre a quantidade de n ímpares até 100.
 	public Integer quantidadeImpares(Integer valor1) {
-		if(valor1 % 2 == 0) 
-			return valor1/2; 
-		
-		return (valor1/2)+1;
+		return (valor1 + 1)/2;
 	}	
 	
 	
 //exericios texto	
-	
 	//1 - Método que receba um texto e devolva ele em LETRAS MAIUSCULAS
 	public String maiscula(String texto) {
 		return texto.toUpperCase();
@@ -87,7 +66,17 @@ public class Exercicio {
 	}
 	
 	//3 - Método que receba DB1START e retorne a quantidade de letras que existe nesta palavra
+	public Integer quantidadeLetra() {
+		String texto = "db1start";
+		texto =  texto.replaceAll("[0-9]", "");
+		texto = texto.trim();
+		return texto.length();
+	}	
+	
+	//sobrecarga
 	public Integer quantidadeLetra(String texto) {
+		texto =  texto.replaceAll("[0-9]", "");
+		texto = texto.trim();
 		return texto.length();
 	}	
 	
@@ -116,15 +105,38 @@ public class Exercicio {
 		texto = texto.trim();
 		return texto.substring((tamanho-4), tamanho);
 	}
+	
+	//9 - Método que receba o seu nome completo e substitua o seu primeiro nome por ALUNO/ALUNA
+	public String substituiTexto(String texto) {
+		String[] textoSeparado = texto.split(" ");
+		textoSeparado[0] = "Aluno/Aluna ";
+		texto = Arrays.stream(textoSeparado).collect(Collectors.joining(" "));
+		return texto;
+	}
 
 	//12 - Método que receba um texto e devolva ele invertido
 	public String inverteTexto(String texto) {
 		return new StringBuilder(texto).reverse().toString();
 	}	
 	
+	//10 - Método que receba o seguinte texto "banana, maçã, melancia" e exiba o texto separadamente.
+	public void formataTexto() {
+		String texto = "banana, maçã, melancia";
+		texto =	texto.replaceAll(" ", "");
+		texto =	texto.replaceAll(",", "\n");
+		
+		System.out.println(texto);
+	}
+	
+	//11 - Método que receba um texto e exiba quantas vogais tem no texto
+	public Integer quantidadeVogal(String texto) {
+		texto = texto.replaceAll("[^AEIOUaeiou ]", "");
+		texto = texto.trim();
+		return texto.length();
+	}
+
 	
 //exercicios Real	
-	
 	//1 - Método que exiba qual é o menor valor entre dois doubles
 	public double menorReal(double valor1, double valor2) {
 		if (valor1 < valor2)
