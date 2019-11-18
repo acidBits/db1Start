@@ -2,7 +2,7 @@ package com.db1Start;
 
 public class Main {
 
-	public static void main(String[] args) {	
+	public static void main(String[] args) { 	
 		String texto = "Curso Db1 StaRt";
 		Integer valor1 = 10, valor2 = 27;
 		double real1 = 10.3, real2 = 5.8, real3 = 20.5;
